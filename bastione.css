@@ -1,0 +1,26 @@
+body{
+/*	margin : 0 20% 1em 20%; */
+	padding : 0 1em 1em auto;
+	background-color : #edb6b8;
+}
+
+header{
+	margin : 0 0 0 0;
+}
+
+h1{
+	margin : 0 auto 1em 2%;
+	font-size: 2em;
+}
+section{
+	margin : 0 auto 1em 2%;
+	width : 30em;
+/*	background-color : #edb6b8; */
+}
+
+
+img#muro{
+	width:100%;
+}
+
+/* ED131E */
