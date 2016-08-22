@@ -1,6 +1,7 @@
 body{
 /*	margin : 0 20% 1em 20%; */
 	padding : 0 1em 1em auto;
+	margin-left: 1em;
 	background-color : #eed2d3;
 	font-family: 'Taviraj', serif;
 }
@@ -9,15 +10,16 @@ header{
 	margin : 0 0 0 0;
 }
 
+
 h1{
-	margin : 0 0 1em 0;
-	padding : 0.2em 1em 0.2em 1em;
-	font-size: 2em;
+	font-size: 1.2em;
+	margin-top: 0;
 	color : #eed2d3;
 	background-color : #ae1f24;
 }
+
 section{
-	margin : 0 1em 1em 1em;
+	margin : 0 1em auto 1em;
 	width : 30em;
 	float : left;
 /*	background-color : #edb6b8; */
@@ -50,4 +52,22 @@ a.button{
 	text-decoration: none;
 	color : #eed2d3;
 	background-color : #ae1f24;
+}
+
+footer
+{
+	padding-top: 1.5em;
+	clear: both;
+	margin-left: 1em;
+}
+
+/* navbar */
+.navbar-default {
+    background-color: #ae1f24;
+    border-color: #E7E7E7;
+}
+
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: #eed2d3;
 }
