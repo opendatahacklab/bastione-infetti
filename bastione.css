@@ -2,7 +2,8 @@ body{
 /*	margin : 0 20% 1em 20%; */
 	padding : 0 1em 1em auto;
 	margin-left: 1em;
-	background-color : #eed2d3;
+/*	background-color : #eed2d3; */
+	background-color : #FA9455;
 	font-family: 'Taviraj', serif;
 }
 
@@ -65,8 +66,12 @@ footer
 /* navbar */
 .navbar-default {
     background-color: #ae1f24;
+    border:0px;
+    border-top:1px solid white;
     border-color: #E7E7E7;
+    border-radius: 0px 0px 5px 5px;
 }
+
 
 /* link */
 .navbar-default .navbar-nav > li > a {
