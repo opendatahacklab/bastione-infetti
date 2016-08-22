@@ -2,40 +2,71 @@
 <html>
 <head>
 	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Bastione degli Infetti</title>
 	<link href="https://fonts.googleapis.com/css?family=Taviraj" rel="stylesheet"> 
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="bastione.css">
 </head>
 <body>
-	<header>
-		<img id="muro" src="img/header.png" alt="foto del muro del bastione" />
-		<h1>Il Bastione degli Infetti</h1>
-	</header>
-	<section id="intro">
-		<p>Siamo intorno al 1550, quando tutto il
-		Mediterraneo era oggetto di attacchi
-		dei pirati saraceni, i quali, partendo dal
-		nord Africa, facevano rapide ed improvvise incursioni lungo le coste siciliane
-		per depredare le citt&agrave;, rapire donne e
-		uomini da vendere come schiavi nei
-		loro mercati.	</p>
-		
-		<p>Catania scamp&ograve; ad un grave pericolo
-		nella primavera del 1551, quando la
-		flotta del pirata saraceno Dragut fu
-		avvistata nei pressi della scogliera
-		dell’Armisi, ma per fortuna, un forte
-		vento allontan&ograve; le navi. Sollecitati dal 
-		pericolo occorso, il 30 novembre 1553 i catanesi 
-		misero mano alla costruzione di mura e bastioni 
-		a maggiore difesa della citt&agrave;.</p>		
-	</section>
+
+	<div class="container">
+		<header>
+			<img id="muro" src="img/header.png" alt="foto del muro del bastione" />
+		</header>
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+	      		<a class="navbar-brand" href="#"><h1>Il Bastione degli Infetti</h1></a>
+	    	</div>
+		    <ul class="nav navbar-nav">
+		      <li class="active"><a href="#">Home</a></li>
+		      <li><a href="eventi.html">Eventi</a></li>
+		      <li><a href="credits.html">Credits</a></li>
+		    </ul>
+		  </div>
+		</nav>
+		<div class="row">
+		<div class="col-sm-6">
+			<section id="intro">
+				<p>Siamo intorno al 1550, quando tutto il
+				Mediterraneo era oggetto di attacchi
+				dei pirati saraceni, i quali, partendo dal
+				nord Africa, facevano rapide ed improvvise incursioni lungo le coste siciliane
+				per depredare le citt&agrave;, rapire donne e
+				uomini da vendere come schiavi nei
+				loro mercati.	</p>
+				
+				<p>Catania scamp&ograve; ad un grave pericolo
+				nella primavera del 1551, quando la
+				flotta del pirata saraceno Dragut fu
+				avvistata nei pressi della scogliera
+				dell’Armisi, ma per fortuna, un forte
+				vento allontan&ograve; le navi. Sollecitati dal 
+				pericolo occorso, il 30 novembre 1553 i catanesi 
+				misero mano alla costruzione di mura e bastioni 
+				a maggiore difesa della citt&agrave;.
+			</p>		
+		</section>
+		</div>
 	
-	<section id="vote">
-		<p>Il Bastione degli Infetti partecipa al concorso 
-		<a href="http://iluoghidelcuore.it/">I Luoghi del Cuore</a>.</p>
+		<div class="col-sm-6">
+			<section id="vote">
+				<p>Il Bastione degli Infetti partecipa al concorso 
+				<a href="http://iluoghidelcuore.it/">I Luoghi del Cuore</a>.</p>
+				
+				<p class="button"><a class="button" href="http://iluoghidelcuore.it/luoghi/86006">Vota</a></p>
+			</section>
+		</div>
+			
+		</div>
 		
-		<p class="button"><a class="button" href="http://iluoghidelcuore.it/luoghi/86006">Vota</a></p>
-	</section>
+		<footer>
+			<p><a href="https://github.com/opendatahacklab/bastione-infetti.git"><img src="./img/github_icon.png" alt=""></a></p>
+		</footer>
+	</div>
 </body>
 </html>
