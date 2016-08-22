@@ -11,9 +11,10 @@ header{
 	padding : 0 0 0 0;
 }
 
+
 h1{
-	padding : 0.2em 1em 0.2em 1em;
-	font-size: 2em;
+	font-size: 1.2em;
+	margin-top: 0;
 	color : #eed2d3;
 	background-color : #ae1f24;
 }
@@ -59,4 +60,15 @@ footer
 	padding-top: 1.5em;
 	clear: both;
 	margin-left: 1em;
+}
+
+/* navbar */
+.navbar-default {
+    background-color: #ae1f24;
+    border-color: #E7E7E7;
+}
+
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: #eed2d3;
 }
