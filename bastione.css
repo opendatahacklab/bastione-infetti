@@ -77,3 +77,15 @@ footer
 .navbar-default .navbar-nav > li > a {
     color: #eed2d3;
 }
+
+/*toggle*/
+div img
+{
+	width:2em;
+	height:2em;
+}
+
+div.data
+{
+	text-align: center;
+}
