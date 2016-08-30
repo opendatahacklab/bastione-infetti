@@ -28,6 +28,7 @@ section{
 }
 
 
+
 img#muro{
 	width:100%;
 	padding : 0 0 0 0;
@@ -36,11 +37,21 @@ img#muro{
 
 /* ED131E */
 section#vote{
-	border: solid black 2px;
-	padding : 1em 1em 1em 1em;
-	font-size : 1.2em;
-	max-width : 25em;
+	padding : 4.5em 1em 1em 1em;
+	font-size : 1em;
+	width : 16em;
+	height : 16em;
 	margin-left : 2em; 
+	background-image: url('img/heart-gray.svg');
+	background-repeat: no-repeat;
+	background-position:center center;
+	background-size : 100% auto;
+	text-align:center;
+	line-height:180%;
+}
+
+section#vote a{
+	white-space: nowrap;
 }
 
 p.button{
