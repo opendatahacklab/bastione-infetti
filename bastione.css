@@ -2,7 +2,6 @@ body{
 /*	margin : 0 20% 1em 20%; */
 	padding : 0 1em 1em auto;
 	margin-left: 1em;
-	margin-right: 1em;
 /*	background-color : #eed2d3; */
 	background-color : #FA9455;
 	font-family: 'Taviraj', serif;
@@ -31,7 +30,6 @@ section{
 
 img#muro{
 	width:100%;
-	height: 100%;
 	padding : 0 0 0 0;
 	margin : 0 0 0 0;
 }
@@ -42,7 +40,7 @@ section#vote{
 	padding : 1em 1em 1em 1em;
 	font-size : 1.2em;
 	max-width : 25em;
-	margin-left : 2em;
+	margin-left : 2em; 
 }
 
 p.button{
@@ -51,7 +49,7 @@ p.button{
 
 a.button{
 	border-radius : 1em;
-	border: none;
+	border: none;	
 	padding: 0.5em 1em 0.5em 1em;
 	text-decoration: none;
 	color : #eed2d3;
@@ -80,26 +78,6 @@ footer
     color: #eed2d3;
 }
 
-#intro{
-	font-size: 1.2em;
-}
-
-@media (min-width: 768px){
-.col-sm-6#bottone{
-    width: 49%;
-    margin:0px;
-	padding: 0px;
-}
-}
-@media (min-width: 992px){
-.col-md-1#separatore {
-    width: 1%;
-    margin:0px;
-	padding: 0px;
-	height: 220px;
-}
-}
-
 /*toggle*/
 div img
 {
@@ -107,14 +85,12 @@ div img
 	height:2em;
 }
 
-img.extLink{
-	height : 1.6em;
-	width : auto;
-	margin: 0 0 0 0;
-	padding: 0 0 0 0;
-}
 div.data
 {
 	text-align: center;
 }
 
+li
+{
+	list-style: none;
+}
