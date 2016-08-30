@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>bastione degli infetti - events</title>
+		<link rel="stylesheet" type="text/css" href="../commons/css/odhl.css" />
+		<link rel="alternate" type="application/rss+xml"  href="rdfevents2rss.php" title="opendatahacklab events feed">
+		<script type="text/javascript" src="http://opendatahacklab.org/sparql_suite/sparql_processor.js"></script>
+		<script type="text/javascript" src="http://opendatahacklab.org/sparql_suite/event_sparql_processor.js"></script>
+		<link rel="stylesheet" type="text/css" href="bastione.css">
+		<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+<body>
+
+<div class="container">
+		<header class="main-header" id="top">
+			<img id="muro" src="img/header.png" alt="foto del muro del bastione" />
+		
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+	      				<a class="navbar-brand" href="#"><h1>Il Bastione degli Infetti</h1></a>
+	    			</div>
+		    		<ul class="nav navbar-nav">
+		      			<li class="active"><a href="#">Home</a></li>
+		      			<li><a href="eventi.html">Eventi</a></li>
+		      			<li><a href="credits.html">Credits</a></li>
+		      			<li><a href="https://github.com/opendatahacklab/bastione-infetti.git"><img class="extLink" src="./img/github_icon_gray.png" alt="GitHub"></a></li>
+		    		</ul>
+		  		</div>
+			</nav>
+		</header>
+		<section id="eventdetail">
+		<p class="loading" id="loading">Loading ...</p>
+	    </section>
+	    <h1 id="maintitle">
+	    </h1>
+		<script type="text/javascript">
+	
+			//the function responsible to print event information
+			var processEventFunction = function(event){
+	
+			//replace titles 
+				var titleLower=event.eventName.toLowerCase();
+				document.getElementById("maintitle").appendChild(document.createTextNode(titleLower));
+			
+			//put event details in the specified section
+				var container = document.getElementById("eventdetail");
+				container.removeChild(document.getElementById("loading"));
+	
+				var time = document.createElement("p");
+				var timeStart = new Date(event.timeStart);
+				time.className="eventtime";
+				time.appendChild(document.createTextNode(timeStart.toLocaleDateString()+" - "+timeStart.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'})));
+				container.appendChild(time);
+
+				var address = document.createElement("p");
+				address.className="eventaddress";
+				address.appendChild(document.createTextNode(event.address));
+				container.appendChild(address);	
+	
+				if(event.description != null){
+					var description = document.createElement("p");
+					description.className="eventdescription";
+					description.appendChild(document.createTextNode(event.description));
+					container.appendChild(description);
+				}
+	
+					
+			};
+
+//retrieve the eventIRI from parameters
+			var eventIRI = location.search.split('?iri=')[1];
+
+			if (eventIRI==null)
+				window.alert("No event IRI provided.");
+			else{
+				var eventIRIdecoded=decodeURIComponent(eventIRI);
+				var p = new SingleEventQueryProcessor(eventIRIdecoded, processEventFunction, function(event){
+				window.alert("No such event!"+eventIRIdecoded);
+				});
+
+				sparql_query("https://dydra.com/cristianolongo/agenda-bastione-degli-infetti-catania/sparql", p);
+			}
+	</script>
+</div>
+
+
+</body>
+</html>

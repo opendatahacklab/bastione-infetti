@@ -54,6 +54,9 @@
 				</div>
 			</div>
 <script type="text/javascript">
+
+		var boolNext = false;
+		var boolPast = false;
 		var container = document.getElementById("events");
 
 		var list_next_events = document.getElementById("next");
@@ -106,12 +109,13 @@
 			element.appendChild(a);
 		}
 
-		function removeLoading(parent, child)
+		function removeLoading(parent, child, event)
 		{
-			if(child.parentNode !== null)
+			if(child.parentNode !== false)
 			{
 				parent.removeChild(child);
-			}	
+			}
+
 		}
 
 		function insertZero(x) {
@@ -127,7 +131,10 @@
 
 		var processEventNextFunction = function(event, isNext) 
 		{
-			removeLoading(list_next_events, loading1);
+			if(!boolNext)
+			{
+				boolNext = true;
+			}
 
 			var li_event = document.createElement("li");
 			var img_toogle = document.createElement("img");
@@ -154,6 +161,8 @@
 			div_row.appendChild(div_details);
 
 			li_event.setAttribute("class", "list-group-item");
+			loading1.setAttribute("class", "list-group-item");
+			loading2.setAttribute("class", "list-group-item");
 			li_event.appendChild(div_row);
 
 			insertDate(event, div_date);
@@ -169,7 +178,11 @@
 		var processEventPastFunction = function(event, isNext) 
 		{
 
-			removeLoading(list_past_events ,loading2);
+			if(!boolPast)
+			{
+				boolPast = true;
+			}
+
 
 			var li_event = document.createElement("li");
 			var img_toogle = document.createElement("img");
@@ -211,19 +224,41 @@
 
 		
 
-		function EventProcessor() {
-			this.processPast = function(event) {
+		function EventProcessor() 
+		{
+
+			this.processPast = function(event) 
+			{
 				processEventPastFunction(event, true);
 			};
-			this.processNext = function(event) {
+			this.processNext = function(event) 
+			{
 				processEventNextFunction(event, true);
 			};
 			this.processFuture = function(event) {
-				processEventNextFunction(event, false);
+				
 			};
 			this.flush = function() 
 			{
+				if(!boolNext)
+				{
+					var string = "Non ci sono nuovi eventi";
+					loading1.innerHTML = string;
+				}
+				else
+				{
+					removeLoading(list_past_events ,loading1);
+				}
 
+				if(!boolPast)
+				{
+					var string = "Non ci sono eventi passati";
+					loading2.innerHTML = string;
+				}
+				else
+				{
+					removeLoading(list_past_events ,loading2);
+				}
 			};
 
 		}
