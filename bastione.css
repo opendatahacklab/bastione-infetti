@@ -186,6 +186,11 @@ img.extLink
 	margin : 0 0 0 0;
 }
 
+#maintitle
+{
+	font-size:300%;
+}
+
 div.data
 {
 	text-align: center;
