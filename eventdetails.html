@@ -56,13 +56,13 @@
 				</ul>
 			</div>
 		</nav>
-		<p id="maintitle">
-	    </p>
-		<section id="eventdetail">
-		<p class="loading" id="loading">Loading ...</p>
-	    </section>
-	    <p id="maintitle">
-	    </p>
+		<div id="container">
+		    <div id class="panel panel-default">
+		    	<div id="maintitle" class="panel-heading" style="background-color: #ae1f24; color: white;"><p class="loading" id="loading">Loading ...</p>
+		   		</div>
+				<div id = "eventDescription" class="panel-body"></div>
+		  	</div>
+		</div>
 	</div>
 	    
 		<script type="text/javascript">
@@ -72,17 +72,21 @@
 	
 			//replace titles 
 				var titleLower=event.eventName.toLowerCase();
-				document.getElementById("maintitle").appendChild(document.createTextNode(titleLower));
+				var mainTitle = document.getElementById("maintitle");
+				var container = document.getElementById("container");
+				var eventDescrPanel = document.getElementById("eventDescription");
+				var hr = document.createElement("hr");
+				mainTitle.appendChild(document.createTextNode(titleLower));
 			
-			//put event details in the specified section
-				var container = document.getElementById("eventdetail");
-				container.removeChild(document.getElementById("loading"));
+	
+				mainTitle.removeChild(document.getElementById("loading"));
 	
 				var time = document.createElement("p");
 				var timeStart = new Date(event.timeStart);
 				time.className="eventtime";
 				time.appendChild(document.createTextNode(timeStart.toLocaleDateString()+" - "+timeStart.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'})));
-				container.appendChild(time);
+				eventDescrPanel.appendChild(time);
+				eventDescrPanel.appendChild(hr);
 
 				/*var address = document.createElement("p");
 				address.className="eventaddress";
@@ -93,7 +97,7 @@
 					var description = document.createElement("p");
 					description.className="eventdescription";
 					description.appendChild(document.createTextNode(event.description));
-					container.appendChild(description);
+					eventDescrPanel.appendChild(description);
 				}
 	
 					
