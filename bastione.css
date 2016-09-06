@@ -202,6 +202,34 @@ li
 
 div img#corsoantico
 {
-	width: 24em;
+	width: auto;
 	height: 4em;
+	border : solid #ae1f24 1px;
+	box-shadow:10px 10px 25px 10px #ae1f24;	 
+	float : left;
+	margin : 0.5em 1em 0.8em 0.5em;
+	vertical-align : middle;
+}
+
+h2{
+	font-size : 2em;
+	margin: 0.2em auto 0.5em 0.5em;
+	padding : 0.5em 0.5em 0.5em 0.5em;
+}
+
+p{
+	margin: 1em 0 2em 0;
+}
+
+p.full{
+	clear:both;
+	margin-top: 2em;
+}
+
+ol{
+	list-style-type:decimal;
+}
+
+li{
+	margin-bottom:1em;
 }
