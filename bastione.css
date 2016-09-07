@@ -206,15 +206,15 @@ div img#corsoantico
 	height: 4em;
 	border : solid #ae1f24 1px;
 	box-shadow:10px 10px 25px 10px #ae1f24;	 
-	float : left;
-	margin : 0.5em 1em 0.8em 0.5em;
+	float : right;
+	margin : 0.5em 2em 0.8em 0.5em;
 	vertical-align : middle;
 }
 
 h2{
 	font-size : 2em;
 	margin: 0.2em auto 0.5em 0.5em;
-	padding : 0.5em 0.5em 0.5em 0.5em;
+	padding : 0.5em 0.5em 0.5em 3em;
 }
 
 p{
@@ -232,4 +232,42 @@ ol{
 
 li{
 	margin-bottom:1em;
+}
+
+table{
+	border-collapse : collapse;
+	margin : 2em auto 2em auto;
+}
+
+caption{
+	color : inherit;
+	font-size : 2em;
+	border-top : solid #ae1f24 0.2em;
+	text-align : center;
+}
+
+td, th{
+	border : solid #FA9455 0.2em;
+	font-size : 1.3em;
+	padding : 0.5em 1em 0.5em 1em;
+	color : #eed2d3;
+	background-color : #ae1f24;
+}
+
+
+
+*.contatti th{
+	text-align : right;
+	color : red;
+}
+
+img.photo_right{
+	border : solid #ae1f24 1px;
+	/* box-shadow:10px 10px 25px 10px #ae1f24; */	 
+	margin : 0 2em 1em 1em;
+	vertical-align : middle;
+	float : left;
+	max-height : 300px;
+	height : 40em;
+	width : auto;
 }
