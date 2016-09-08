@@ -43,7 +43,7 @@ img#muro{
 	font-size : 1em;
 	width : 16em;
 	height : 16em;
-	margin-left : 2em; 
+	margin-left : 2em;
 	background-image: url('img/heart-gray.svg');
 	background-repeat: no-repeat;
 	background-position:center center;
@@ -195,6 +195,10 @@ div.data
 {
 	text-align: center;
 }
+
+
+
+
 li
 {
 	list-style: none;
@@ -205,16 +209,16 @@ div img#corsoantico
 	width: auto;
 	height: 4em;
 	border : solid #ae1f24 1px;
-	box-shadow:10px 10px 25px 10px #ae1f24;	 
-	float : right;
-	margin : 0.5em 2em 0.8em 0.5em;
+	box-shadow:10px 10px 25px 10px #ae1f24;
+	float : left;
+	margin : 0.5em 1em 0.8em 0.5em;
 	vertical-align : middle;
 }
 
 h2{
 	font-size : 2em;
 	margin: 0.2em auto 0.5em 0.5em;
-	padding : 0.5em 0.5em 0.5em 3em;
+	padding : 0.5em 0.5em 0.5em 0.5em;
 }
 
 p{
@@ -233,41 +237,50 @@ ol{
 li{
 	margin-bottom:1em;
 }
-
 table{
-	border-collapse : collapse;
-	margin : 2em auto 2em auto;
+    border-collapse : collapse;
+    margin : 2em auto 2em auto;
 }
-
-caption{
-	color : inherit;
-	font-size : 2em;
-	border-top : solid #ae1f24 0.2em;
-	text-align : center;
-}
-
 td, th{
-	border : solid #FA9455 0.2em;
-	font-size : 1.3em;
-	padding : 0.5em 1em 0.5em 1em;
-	color : #eed2d3;
-	background-color : #ae1f24;
+    border : solid #FA9455 0.2em;
+    font-size : 1.3em;
+    padding : 0.5em 1em 0.5em 1em;
+    color : #eed2d3;
+    background-color : #ae1f24;
 }
-
-
+caption{
+    color : inherit;
+    font-size : 2em;
+    border-top : solid #ae1f24 0.2em;
+    text-align : center;
+}
 
 *.contatti th{
-	text-align : right;
-	color : red;
+    text-align : right;
+    color : red;
 }
 
 img.photo_right{
-	border : solid #ae1f24 1px;
-	/* box-shadow:10px 10px 25px 10px #ae1f24; */	 
-	margin : 0 2em 1em 1em;
-	vertical-align : middle;
-	float : left;
-	max-height : 300px;
-	height : 40em;
-	width : auto;
+    border : solid #ae1f24 1px;
+    /* box-shadow:10px 10px 25px 10px #ae1f24; */
+    margin : 0 2em 1em 1em;
+    vertical-align : middle;
+    float : left;
+    max-height : 300px;
+    height : 40em;
+    width : auto;
+}
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    padding: 5px 0px;
+}
+}
+
+
+#elencoEventi{
+    padding: 0px;
 }
