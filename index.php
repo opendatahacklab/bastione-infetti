@@ -27,7 +27,6 @@
 							Infetti</h1></a>
 				</div>
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
 					<li><a href="eventi.html">Eventi</a></li>
 					<li><a href="corsoantico.html">Comitato</a></li>
 					<li><a href="credits.html">Credits</a></li>
