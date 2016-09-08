@@ -23,11 +23,10 @@
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="#"><h1>Il Bastione degli
+					<a class="navbar-brand" href="index.html"><h1>Il Bastione degli
 							Infetti</h1></a>
 				</div>
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
 					<li><a href="eventi.html">Eventi</a></li>
 					<li><a href="corsoantico.html">Comitato</a></li>
 					<li><a href="credits.html">Credits</a></li>
@@ -37,7 +36,7 @@
 					<li><a href="corsoantico.html#contatti">
 						<img src="./img/contacts.png"
 							class="extLink" />
-					</a></li>		
+					</a></li>
 					<li><a href="data.html" title="open data"><img
 							src="img/rdf.png" class="extLink" alt="Open Data" /></a></li>
 					<li><a
@@ -106,6 +105,6 @@
 					target="_blank">Visualizza mappa ingrandita</a></small>
 			</div>
 		</div>
-	</div>	
+	</div>
 </body>
 </html>
