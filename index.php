@@ -4,58 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bastione degli Infetti</title>
-<link href="https://fonts.googleapis.com/css?family=Titillium+Web"
-	rel="stylesheet">
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script
-	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web"rel="stylesheet">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="bastione.css">
+<script>
+ jQuery(document).ready(function($) {
+ 	$("#index").addClass('active');
+ });
+</script>	
 </head>
 <body>
-
 	<div class="container">
-		<header>
-			<img id="muro" src="img/header.png" alt="foto del muro del bastione" />
-		</header>
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="#"><h1>Il Bastione degli
-							Infetti</h1></a>
-				</div>
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="eventi.html">Eventi</a></li>
-					<li><a href="corsoantico.html">Comitato</a></li>
-					<li><a href="credits.html">Credits</a></li>
-					<li><a href="http://iluoghidelcuore.it/luoghi/86006"
-						target="_blank" title="vota come luogo del cuore"><img
-							class="extLink" src="./img/heart-gray.png" alt="Vota"></a></li>
-					<li><a href="corsoantico.html#contatti">
-						<img src="./img/contacts.png"
-							class="extLink" />
-					</a></li>		
-					<li><a href="data.html" title="open data"><img
-							src="img/rdf.png" class="extLink" alt="Open Data" /></a></li>
-					<li><a
-						href="http://www.opendatahacklab.org/free-agenda/bastione-degli-infetti-catania/agenda.atom"
-						type="application/atom+xml" title="aggiornamenti sugli eventi"><img
-							src="img/rss-feed-icon-gray.png" class="extLink"
-							alt="Aggiornamenti sugli eventi" /></a></li>
-					<li><a
-						href="http://www.opendatahacklab.org/free-agenda/bastione-degli-infetti-catania/agenda.ics"
-						type="application/atom+xml" title="calendario eventi"><img
-							src="img/Calendar-gray.png" class="extLink"
-							alt="Calendario eventi" /></a></li>
-					<li><a
-						href="https://github.com/opendatahacklab/bastione-infetti.git"><img
-							class="extLink" target="_blank" src="./img/github_icon_gray.png" alt="GitHub"></a></li>
-				</ul>
-			</div>
-		</nav>
+	<?php  include("php/header.php");?>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-6"
@@ -70,7 +32,7 @@
 
 						<p>Catania scamp&ograve; ad un grave pericolo nella primavera
 							del 1551, quando la flotta del pirata saraceno Dragut fu
-							avvistata nei pressi della scogliera dell’Armisi, ma per fortuna,
+							avvistata nei pressi della scogliera dellâ€™Armisi, ma per fortuna,
 							un forte vento allontan&ograve; le navi. Sollecitati dal pericolo
 							occorso, il 30 novembre 1553 i catanesi misero mano alla
 							costruzione di mura e bastioni a maggiore difesa della
@@ -93,6 +55,8 @@
 					</div>
 				</div>
 			</div>
+			<?php  include("php/load_next_event.php");?>
+
 		</div>
 
 		<div class="row" style="margin-top: 2em;">
@@ -106,6 +70,6 @@
 					target="_blank">Visualizza mappa ingrandita</a></small>
 			</div>
 		</div>
-	</div>	
+	</div>
 </body>
 </html>
