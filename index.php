@@ -1,3 +1,13 @@
+<?php
+/**
+ * store on a file access.log date and time of accessing this code.
+ */
+define('CSV_TIME_FORMAT',"Y\tm\td\tH\ti\ts\n");
+$handle = fopen("access.log", "a");
+fwrite($handle, date(CSV_TIME_FORMAT));
+fflush($handle);
+fclose($handle);
+?>
 <!doctype html>
 <html>
 <head>
@@ -29,7 +39,6 @@
 				<ul class="nav navbar-nav">
 					<li><a href="eventi.html">Eventi</a></li>
 					<li><a href="corsoantico.html">Comitato</a></li>
-					<li><a href="credits.html">Credits</a></li>
 					<li><a href="http://iluoghidelcuore.it/luoghi/86006"
 						target="_blank" title="vota come luogo del cuore"><img
 							class="extLink" src="./img/heart-gray.png" alt="Vota"></a></li>
