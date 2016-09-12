@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Taviraj" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -12,20 +12,22 @@
 	<script type="text/javascript"
 	src="http://www.opendatahacklab.org/sparql_suite/event_sparql_processor.js"></script>
 	<link rel="stylesheet" type="text/css" href="./bastione.css">
-	<title>Il Bastione degli Infetti - Eventi</title>
+	<title>Eventi</title>
 </head>
 <body>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+	<div class="container">
 	<header>
-		<img id="muro" src="img/header.png" alt="foto del muro del bastione" />
-	</header>
-	<nav class="navbar navbar-default">
-		  <div class="container-fluid">
-			<div class="navbar-header">
-	      		<a class="navbar-brand" href="index.php"><h1>Il Bastione degli Infetti</h1></a>
-	    	</div>
+			<img id="muro" src="img/header.png" alt="foto del muro del bastione" />
+		</header>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.php"><h1 style="margin:0px;">Il Bastione degli
+							Infetti</h1></a>
+				</div>
 				<ul class="nav navbar-nav">
+
 					<li class="active"><a href="eventi.html">Eventi</a></li>
 					<li><a href="corsoantico.html">Comitato</a></li>
 <!-- 					<li><a href="credits.html">Credits</a></li> -->
@@ -35,7 +37,7 @@
 					<li><a href="corsoantico.html#contatti">
 						<img src="./img/contacts.png"
 							class="extLink" />
-					</a></li>		
+					</a></li>
 					<li><a href="data.html" title="open data"><img
 							src="img/rdf.png" class="extLink" alt="Open Data" /></a></li>
 					<li><a
@@ -52,25 +54,25 @@
 						href="https://github.com/opendatahacklab/bastione-infetti.git"><img
 							class="extLink" target="_blank" src="./img/github_icon_gray.png" alt="GitHub"></a></li>
 				</ul>
-		  </div>
+			</div>
 		</nav>
-		<div class="container">
+		<div class="container-fluid" id="elencoEventi">
 			<div class="panel panel-default">
 				  <!-- Default panel contents -->
 				  <div class="panel-heading" style="background-color: #ae1f24; color: white;">Prossimi Eventi</div>
 				  <!-- List group -->
-				  <ul id="next" class="list-group">
+				  <ul id="next" class="list-group"  style="text-align:center;">
 				  	<li id="loading1">Caricamento...</li>
 				  </ul>
 				</div>
-	
+
 			</div>
-			<div class="container">
+			<div class="container-fluid" id="elencoEventi">
 			<div class="panel panel-default">
 				  <!-- Default panel contents -->
 				  <div class="panel-heading" style="background-color: #ae1f24; color: white;">Eventi Passati</div>
 				  <!-- List group -->
-				  <ul id="past" class="list-group">
+				  <ul id="past" class="list-group"  style="text-align:center;">
 				  	<li id="loading2">Caricamento...</li>
 				  </ul>
 				</div>
@@ -86,7 +88,8 @@
 		var loading1 = document.getElementById("loading1");
 		var loading2 = document.getElementById("loading2");
 
-		function setAttributes(el, attrs) 
+
+		function setAttributes(el, attrs)
 		{
   			for(var key in attrs) {
     			el.setAttribute(key, attrs[key]);
@@ -144,14 +147,14 @@
 
 		if (x == "0" || x == "1" || x == "2" || x == "3" || x == "4"
 					 || x == "5" || x == "6" || x == "7" || x == "8"
-					|| x == "9") 
+					|| x == "9")
 				{
 					x = "0" + x;
 				}
 				return x;
 			};
 
-		var processEventNextFunction = function(event, isNext) 
+		var processEventNextFunction = function(event, isNext)
 		{
 			if(!boolNext)
 			{
@@ -176,7 +179,7 @@
 			setAttributes(div_details, {"class": "col-md-2 col-md-push-2 col-xs-4"});
 
 
-			
+
 			div_row.appendChild(div_date);
 			div_row.appendChild(div_time);
 			div_row.appendChild(div_title);
@@ -197,7 +200,7 @@
 		};
 
 
-		var processEventPastFunction = function(event, isNext) 
+		var processEventPastFunction = function(event, isNext)
 		{
 
 			if(!boolPast)
@@ -224,7 +227,7 @@
 			setAttributes(div_details, {"class": "col-md-2 col-md-push-2 col-xs-4"});
 
 
-			
+
 			div_row.appendChild(div_date);
 			div_row.appendChild(div_time);
 			div_row.appendChild(div_title);
@@ -244,23 +247,23 @@
 
 
 
-		
 
-		function EventProcessor() 
+
+		function EventProcessor()
 		{
 
-			this.processPast = function(event) 
+			this.processPast = function(event)
 			{
 				processEventPastFunction(event, true);
 			};
-			this.processNext = function(event) 
+			this.processNext = function(event)
 			{
 				processEventNextFunction(event, true);
 			};
 			this.processFuture = function(event) {
-				
+
 			};
-			this.flush = function() 
+			this.flush = function()
 			{
 				if(!boolNext)
 				{
@@ -289,6 +292,6 @@
 
 		sparql_query("https://dydra.com/cristianolongo/agenda-bastione-degli-infetti-catania/sparql",p);
 	</script>
-
+</div>
 </body>
 </html>

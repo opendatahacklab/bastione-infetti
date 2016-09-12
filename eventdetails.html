@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bastione degli Infetti - Eventi</title>
+<title>Bastione degli Infetti</title>
 <link href="https://fonts.googleapis.com/css?family=Titillium+Web"
 	rel="stylesheet">
 <link rel="stylesheet"
@@ -31,16 +31,12 @@
 							Infetti</h1></a>
 				</div>
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="eventi.html">Eventi</a></li>
+					<li><a href="eventi.html">Eventi</a></li>
 					<li><a href="corsoantico.html">Comitato</a></li>
 <!-- 					<li><a href="credits.html">Credits</a></li> -->
 					<li><a href="http://iluoghidelcuore.it/luoghi/86006"
 						target="_blank" title="vota come luogo del cuore"><img
 							class="extLink" src="./img/heart-gray.png" alt="Vota"></a></li>
-					<li><a href="corsoantico.html#contatti">
-						<img src="./img/contacts.png"
-							class="extLink" />
-					</a></li>		
 					<li><a href="data.html" title="open data"><img
 							src="img/rdf.png" class="extLink" alt="Open Data" /></a></li>
 					<li><a
@@ -55,11 +51,10 @@
 							alt="Calendario eventi" /></a></li>
 					<li><a
 						href="https://github.com/opendatahacklab/bastione-infetti.git"><img
-							class="extLink" target="_blank" src="./img/github_icon_gray.png" alt="GitHub"></a></li>
+							class="extLink" src="./img/github_icon_gray.png" alt="GitHub"></a></li>
 				</ul>
 			</div>
 		</nav>
-		<p><a href="eventi.html">Vedi l'elenco completo degli eventi</a></p>
 		<div id="container">
 		    <div id class="panel panel-default">
 		    	<div id="maintitle" class="panel-heading" style="background-color: #ae1f24; color: white;"><p class="loading" id="loading">Loading ...</p>
@@ -68,23 +63,23 @@
 		  	</div>
 		</div>
 	</div>
-	    
+
 		<script type="text/javascript">
-	
+
 			//the function responsible to print event information
 			var processEventFunction = function(event){
-	
-			//replace titles 
+
+			//replace titles
 				var titleLower=event.eventName.toLowerCase();
 				var mainTitle = document.getElementById("maintitle");
 				var container = document.getElementById("container");
 				var eventDescrPanel = document.getElementById("eventDescription");
 				var hr = document.createElement("hr");
 				mainTitle.appendChild(document.createTextNode(titleLower));
-			
-	
+
+
 				mainTitle.removeChild(document.getElementById("loading"));
-	
+
 				var time = document.createElement("p");
 				var timeStart = new Date(event.timeStart);
 				time.className="eventtime";
@@ -96,15 +91,15 @@
 				address.className="eventaddress";
 				address.appendChild(document.createTextNode(event.address));
 				container.appendChild(address);	*/
-	
+
 				if(event.description != null){
 					var description = document.createElement("p");
 					description.className="eventdescription";
 					description.appendChild(document.createTextNode(event.description));
 					eventDescrPanel.appendChild(description);
 				}
-	
-					
+
+
 			};
 
 //retrieve the eventIRI from parameters
