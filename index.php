@@ -108,7 +108,7 @@ fclose($handle);
 				<iframe width="100%" height="350" frameborder="0" scrolling="no"
 					marginheight="0" marginwidth="0"
 					src="http://www.openstreetmap.org/export/embed.html?bbox=15.077335238456724%2C37.505695941797846%2C15.08144438266754%2C37.50805348165004&amp;layer=mapnik&amp;marker=37.50687472103061%2C15.079389810562134"
-					style="border: 1px solid black"></iframe>
+					style="border: 3px solid #ae1f24"></iframe>
 				<br />
 				<small><a href="http://www.openstreetmap.org/way/42035803"
 					target="_blank">Visualizza mappa ingrandita</a></small>
