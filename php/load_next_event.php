@@ -55,8 +55,7 @@ if( $result ) {
 					</li>
 				</ul>
 				</div>
-				<p><a href="eventi.html">Vedi la lista completa degli eventi</a></p>
-				</div>');		
+				<p><a href="eventi.html">Vedi la lista completa degli eventi</a></p>');		
 	}
 }
 ?>
