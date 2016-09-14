@@ -64,7 +64,8 @@ fclose($handle);
 				</ul>
 			</div>
 		</nav>
-		<div class="container-fluid">
+		<div class="container-fluid">		
+					<?php  include("php/load_next_event.php");?>		
 			<div class="row">
 				<div class="col-sm-6"
 					style="padding: 0px; font-size: 1.2em; padding-right: 2%;"
