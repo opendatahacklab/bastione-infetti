@@ -161,7 +161,7 @@ footer
     margin:0px;
 	padding: 0px;
 	height: 220px;
-	border-left:1px solid #000;
+	border-left:3px solid #ae1f24;
 }
 }
 @media only screen and (max-width: 1100px){
