@@ -33,7 +33,7 @@ fclose($handle);
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="index.html"><h1>Il Bastione degli
+					<a class="navbar-brand" href="index.php"><h1>Il Bastione degli
 							Infetti</h1></a>
 				</div>
 				<ul class="nav navbar-nav">
