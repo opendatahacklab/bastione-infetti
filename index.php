@@ -50,7 +50,7 @@ fclose($handle);
 					<li><a href="data.html" title="open data"><img
 							src="img/rdf.png" class="extLink" alt="Open Data" /></a></li>
 					<li><a
-						href="http://www.opendatahacklab.org/free-agenda/bastione-degli-infetti-catania/http://www.opendatahacklab.org/free-agenda/bastione-degli-infetti-catania/rssfeed.php"
+						href="http://www.opendatahacklab.org/free-agenda/bastione-degli-infetti-catania/rssfeed.php"
 						type="application/atom+xml" title="aggiornamenti sugli eventi"><img
 							src="img/rss-feed-icon-gray.png" class="extLink"
 							alt="Aggiornamenti sugli eventi" /></a></li>
