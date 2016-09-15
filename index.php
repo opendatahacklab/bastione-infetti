@@ -39,6 +39,7 @@ fclose($handle);
 				<ul class="nav navbar-nav">
 					<li><a href="eventi.html">Eventi</a></li>
 					<li><a href="corsoantico.html">Comitato</a></li>
+					<li><a href="storia.html">Storia</a></li>
 					<li><a href="http://iluoghidelcuore.it/luoghi/86006"
 						target="_blank" title="vota come luogo del cuore"><img
 							class="extLink" src="./img/heart-gray.png" alt="Vota"></a></li>
@@ -49,12 +50,12 @@ fclose($handle);
 					<li><a href="data.html" title="open data"><img
 							src="img/rdf.png" class="extLink" alt="Open Data" /></a></li>
 					<li><a
-						href="http://www.opendatahacklab.org/free-agenda/bastione-degli-infetti-catania/agenda.atom"
+						href="http://www.opendatahacklab.org/free-agenda/bastione-degli-infetti-catania/http://www.opendatahacklab.org/free-agenda/bastione-degli-infetti-catania/rssfeed.php"
 						type="application/atom+xml" title="aggiornamenti sugli eventi"><img
 							src="img/rss-feed-icon-gray.png" class="extLink"
 							alt="Aggiornamenti sugli eventi" /></a></li>
 					<li><a
-						href="http://www.opendatahacklab.org/free-agenda/bastione-degli-infetti-catania/agenda.ics"
+						href="http://www.opendatahacklab.org/free-agenda/bastione-degli-infetti-catania/calendar.php"
 						type="application/atom+xml" title="calendario eventi"><img
 							src="img/Calendar-gray.png" class="extLink"
 							alt="Calendario eventi" /></a></li>
