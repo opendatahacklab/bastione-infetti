@@ -284,3 +284,52 @@ img.photo_right{
 #elencoEventi{
     padding: 0px;
 }
+
+img.creditsLogo{
+	float : left;
+	width: auto;
+	height: 4em;
+	border : solid #ae1f24 1px;
+	box-shadow:10px 10px 25px 10px #ae1f24;
+	vertical-align : middle;
+	background-color : white;
+	padding: 0;
+	margin: 2em 2em 2em 2em;
+}
+
+img#creditsLogoodhl{
+	width : 10em;
+	height : auto;
+}
+
+img#creditsLogogdg, img#creditsLogoac{
+	width : auto;
+	height : 4em;
+}
+
+img#creditsLogogdg{
+	margin-top : 4em;
+}
+
+img#creditsLogoac{
+	margin-top : 3em;
+}
+
+ol.iconlist{
+	list-style-type : none;
+}
+
+ol.iconlist img {
+	height : 3em;
+	width : auto;
+	vertical-align : middle;
+	margin : 0.3em 1em 1em 1em;
+	float : left;
+}
+
+ol.iconlist li{
+	clear:left;
+	margin-bottom : 1em;
+	vertical-align:middle;
+}
+
