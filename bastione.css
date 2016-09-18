@@ -293,16 +293,16 @@ img.creditsLogo{
 	box-shadow:10px 10px 25px 10px #ae1f24;
 	vertical-align : middle;
 	background-color : white;
-	padding: 0;
 	margin: 2em 2em 2em 2em;
 }
 
-img#creditsLogoodhl{
+img#creditsLogoodhl, img#creditsLogogdg{
+	padding: 0.5em 0.5em 0.5em 0.5em;
 	width : 10em;
 	height : auto;
 }
 
-img#creditsLogogdg, img#creditsLogoac{
+img#creditsLogoac{
 	width : auto;
 	height : 4em;
 }
