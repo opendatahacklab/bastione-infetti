@@ -40,6 +40,9 @@ fclose($handle);
 					<li><a href="eventi.html">Eventi</a></li>
 					<li><a href="corsoantico.html">Comitato</a></li>
 					<li><a href="storia.html">Storia</a></li>
+					<li>
+						<a href="credits.html">Riconoscimenti</a>
+					</li>
 					<li><a href="http://iluoghidelcuore.it/luoghi/86006"
 						target="_blank" title="vota come luogo del cuore"><img
 							class="extLink" src="./img/heart-gray.png" alt="Vota"></a></li>
@@ -85,6 +88,7 @@ fclose($handle);
 							occorso, il 30 novembre 1553 i catanesi misero mano alla
 							costruzione di mura e bastioni a maggiore difesa della
 							citt&agrave;.</p>
+						<p><a href="storia.html">Vedi la storia del Bastione degli Infetti</a></p>
 					</div>
 				</div>
 				<div class="col-md-1" id="separatore"></div>
