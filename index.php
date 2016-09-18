@@ -59,7 +59,7 @@ fclose($handle);
 							alt="Aggiornamenti sugli eventi" /></a></li>
 					<li><a
 						href="http://www.opendatahacklab.org/free-agenda/bastione-degli-infetti-catania/calendar.php"
-						type="application/atom+xml" title="calendario eventi"><img
+						type="text/calendar" title="calendario eventi"><img
 							src="img/Calendar-gray.png" class="extLink"
 							alt="Calendario eventi" /></a></li>
 					<li><a
