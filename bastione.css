@@ -341,6 +341,15 @@ color : inherit;
 font-weight: bold;
 }
 
+a[href^="mailto:"], a[href^="mailto:"]:visited, a[href^="mailto:"]:active{
+	color : inherit;
+	font-weight: bold;
+}
+
 a:hover{
+	color : inherit;
+}
+
+a[href^="mailto:"]:hover {
 	color : inherit;
 }
