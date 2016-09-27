@@ -336,7 +336,7 @@ ol.iconlist li{
 	vertical-align:middle;
 }
 
-a {
+a, a:visited, a:active {
 color : inherit;
 font-weight: bold;
 }
