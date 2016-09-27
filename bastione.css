@@ -336,3 +336,11 @@ ol.iconlist li{
 	vertical-align:middle;
 }
 
+a {
+color : inherit;
+font-weight: bold;
+}
+
+a:hover{
+	color : inherit;
+}
