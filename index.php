@@ -102,7 +102,7 @@ fclose($handle);
 
 						<p class="button">
 							<a class="button" href="http://iluoghidelcuore.it/luoghi/86006"
-								target="_blank">Votalo!</a>
+								target="_blank" style="color:#eed2d3">Votalo!</a>
 						</p>
 					</div>
 				</div>
