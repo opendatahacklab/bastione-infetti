@@ -353,3 +353,14 @@ a:hover{
 a[href^="mailto:"]:hover {
 	color : inherit;
 }
+
+code{
+	background-color : transparent;
+	color : inherit;
+	font-family: "Lucida Console", Courier, monospace;
+}
+
+abbr{
+	text-decoration : none;
+	border-bottom:none;
+}
