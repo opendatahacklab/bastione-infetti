@@ -12,7 +12,7 @@
 	<script type="text/javascript"
 	src="http://www.opendatahacklab.org/sparql_suite/event_sparql_processor.js"></script>
 	<link rel="stylesheet" type="text/css" href="./bastione.css">
-	<title>Eventi</title>
+	<title>Eventi del Comitato Popolare Antico Corso</title>
 </head>
 <body>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -59,6 +59,9 @@
 			</div>
 		</nav>
 		<div class="container-fluid" id="elencoEventi">
+			<p>
+			(*) Eventi organizzati dal Comitato Popolare Antico Corso al di fuori del Bastione
+			</p>			
 			<div class="panel panel-default">
 				  <!-- Default panel contents -->
 				  <div class="panel-heading" style="background-color: #ae1f24; color: white;">Prossimi Eventi</div>
@@ -123,7 +126,9 @@
 
 		function insertTitle(event, element)
 		{
-			var titleEvent = document.createTextNode(event.eventName);
+			var title = event.eventPlace=='Bastione degli Infetti' ? event.eventName :
+				event.eventName+" (*)";
+			var titleEvent = document.createTextNode(title);
 			element.appendChild(titleEvent);
 		}
 
@@ -156,13 +161,10 @@
 				return x;
 			};
 
-		var processEventNextFunction = function(event, isNext)
-		{
-			if(!boolNext)
-			{
-				boolNext = true;
-			}
-
+		/**
+		 * Process an event and attach it to the specified parent
+		 */
+		var processEvent = function(event, parentEl){
 			var li_event = document.createElement("li");
 			var img_toogle = document.createElement("img");
 
@@ -197,77 +199,32 @@
 			insertTitle(event, div_title);
 			insertToggle(event, div_details, img_toogle);
 
-			list_next_events.appendChild(li_event);
-
-		};
-
-
-		var processEventPastFunction = function(event, isNext)
-		{
-
-			if(!boolPast)
-			{
-				boolPast = true;
-			}
-
-
-			var li_event = document.createElement("li");
-			var img_toogle = document.createElement("img");
-
-			var div_row = document.createElement("div");
-			var div_date = document.createElement("div");
-			var div_time = document.createElement("div");
-			var div_title = document.createElement("div");
-			var div_details = document.createElement("div");
-
-	//Setto le classi Bootstrap
-			div_row.setAttribute('class', 'row');
-
-			setAttributes(div_date, {"class" : "col-md-2 col-xs-2"});
-			setAttributes(div_time, {"class" : "col-md-2 col-xs-2"});
-			setAttributes(div_title, {"class" : "col-md-4 col-xs-4"});
-			setAttributes(div_details, {"class": "col-md-2 col-md-push-2 col-xs-4"});
-
-
-
-			div_row.appendChild(div_date);
-			div_row.appendChild(div_time);
-			div_row.appendChild(div_title);
-			div_row.appendChild(div_details);
-
-			li_event.setAttribute("class", "list-group-item");
-			li_event.appendChild(div_row);
-
-			insertDate(event, div_date);
-			insertTime(event, div_time);
-			insertTitle(event, div_title);
-			insertToggle(event, div_details, img_toogle);
-
-			list_past_events.appendChild(li_event);
-
-		};
-
-
-
-
+			parentEl.appendChild(li_event);			
+		}	
+		
 
 		function EventProcessor()
 		{
-
+			var boolNext = false;
+			var boolPast = false;
+			
 			this.processPast = function(event)
 			{
-				processEventPastFunction(event, true);
+				this.boolPast = true;
+				processEvent(event, list_past_events);
 			};
 			this.processNext = function(event)
 			{
-				processEventNextFunction(event, true);
+				this.boolNext = true;
+				processEvent(event, list_next_events);
 			};
 			this.processFuture = function(event) {
-
+				this.boolNext = true;
+				processEvent(event, list_next_events);
 			};
 			this.flush = function()
 			{
-				if(!boolNext)
+				if(!this.boolNext)
 				{
 					var string = "Non ci sono nuovi eventi";
 					loading1.innerHTML = string;
@@ -277,7 +234,7 @@
 					removeLoading(list_next_events ,loading1);
 				}
 
-				if(!boolPast)
+				if(!this.boolPast)
 				{
 					var string = "Non ci sono eventi passati";
 					loading2.innerHTML = string;

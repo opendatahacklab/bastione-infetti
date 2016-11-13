@@ -66,6 +66,7 @@
 		    <div id class="panel panel-default">
 		    	<div id="maintitle" class="panel-heading" style="background-color: #ae1f24; color: white;"><p class="loading" id="loading">Loading ...</p>
 		   		</div>
+		   		<div id = "location" class="panel-body" ></div>
 				<div id = "eventDescription" class="panel-body"></div>
 		  	</div>
 		</div>
@@ -81,6 +82,7 @@
 				var mainTitle = document.getElementById("maintitle");
 				var container = document.getElementById("container");
 				var eventDescrPanel = document.getElementById("eventDescription");
+				var locationPanel = document.getElementById("location");
 				var hr = document.createElement("hr");
 				mainTitle.appendChild(document.createTextNode(titleLower));
 
@@ -94,10 +96,8 @@
 				eventDescrPanel.appendChild(time);
 				eventDescrPanel.appendChild(hr);
 
-				/*var address = document.createElement("p");
-				address.className="eventaddress";
-				address.appendChild(document.createTextNode(event.address));
-				container.appendChild(address);	*/
+				var addressTxt = event.eventPlace ==null ? event.address : event.eventPlace + " - "+event.address;
+				locationPanel.appendChild(document.createTextNode(addressTxt));				
 
 				if(event.description != null){
 					var description = document.createElement("p");
