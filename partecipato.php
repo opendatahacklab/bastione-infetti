@@ -5,7 +5,7 @@
 		"\nOggetto: Democrazia partecipata - Risposta all'avviso pubblico del".
 		"17 dicembre c.a. – ISTANZA ex art. 43 dello Statuto della Città di".
 		"Catania e art. 5 del Regolamento sugli Istituti di partecipazione e consultazione dei cittadini.\n".
-		"\nIo sottoscritto [nome e cognome], nato a [luogo di nascita], il [data di nascita] espone quanto segue:".
+		"\nIo sottoscritto/a [nome e cognome], nato/a a [luogo di nascita], il [data di nascita] espone quanto segue:".
 		"ai fini della destinazione dei fondi di cui all’art. 6, comma 1 della L. R. n° 5/2014 ".
 		"(come modificata dal comma 2 dell’art. 6 della L. R. 9/2015),".
 		"si esprime come preferenza quella inerente l'azione:\n".

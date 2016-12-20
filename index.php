@@ -68,7 +68,7 @@ fclose($handle);
 		<div class="container-fluid">		
 					<?php  include("php/load_next_event.php");?>		
 			<div class="row">
-				<div class="col-sm-12"
+				<div class="col-sm-6">
 					style="padding: 0px; font-size: 1.2em; padding-right: 2%;"
 					id="storia">
 					<div class="container" id="paragrafo">
@@ -88,6 +88,21 @@ fclose($handle);
 						<p><a href="storia.html">Vedi la storia del Bastione degli Infetti</a></p>
 					</div>
 				</div>
+				<div class="col-md-1" id="separatore"></div>
+				<div class="col-sm-6" style="padding: 0px;" id="bottone">
+					<div class="container" id="vote">
+						<p>
+							Il Bastione degli Infetti &egrave; tra le azioni del
+							<a href="http://www.comune.catania.it/informazioni/avvisi/avvisi-2016/default.aspx?news=55759">bilancio partecipato</a>.
+						</p>
+
+						<p class="button">
+							<a class="button" href="partecipato.php"
+								style="color:#eed2d3">Votalo!</a>
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<div class="row" style="margin-top: 2em;">
