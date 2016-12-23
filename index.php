@@ -69,8 +69,6 @@ fclose($handle);
 					<?php  include("php/load_next_event.php");?>		
 			<div class="row">
 				<div class="col-sm-6">
-					style="padding: 0px; font-size: 1.2em; padding-right: 2%;"
-					id="storia">
 					<div class="container" id="paragrafo">
 						<p>Siamo intorno al 1550, quando tutto il Mediterraneo era
 							oggetto di attacchi dei pirati saraceni, i quali, partendo dal
