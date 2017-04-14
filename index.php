@@ -109,7 +109,7 @@ fclose($handle);
 	<p>Sono accessibili nelle seguenti modalit&agrave;:</p>
 	<ol class="iconlist">
 		<li><img src="./img/rdf.png" /> <a href="http://www.opendatahacklab.org/free-agenda/bastione-degli-infetti-catania/ontology.php" type="application/rdf+xml">ontologia OWL in RDF/XML</a></li>
-		<li><img src="./img/rdf.png" /> <a href="https://dydra.com/cristianolongo/agenda-bastione-degli-infetti-catania/sparql">SPARQL endpoint</a>,</li>
+		<li><img src="./img/rdf.png" /> <a href="http://www.opendatahacklab.org/free-agenda/bastione-degli-infetti-catania/sparql.php">SPARQL endpoint</a>,</li>
 		<li><img src="./img/Calendar-gray.svg" /><a href="http://www.opendatahacklab.org/free-agenda/bastione-degli-infetti-catania/calendar.php">Internet Calendar</a>,</li>
 		<li><img src="./img/rss-feed-icon-gray.png" /> <a href="http://www.opendatahacklab.org/free-agenda/bastione-degli-infetti-catania/rssfeed.php">Feed RSS Atom</a>.</li>
 	</ol>			
